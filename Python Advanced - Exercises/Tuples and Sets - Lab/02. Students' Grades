@@ -1,0 +1,18 @@
+def avg(values):
+    return sum(values) / len(values)
+
+
+n = int(input())
+dd = {}
+
+for _ in range(n):
+    name, grade_string = input().split()
+    grade = float(grade_string)
+    if name not in dd:
+        dd[name] = []
+    dd[name].append(grade)
+
+for student, grade in dd.items():
+    average = avg(grade)
+    grades_str = ' '.join(str(f'{x:.2f}') for x in grade)
+    print(f"{student} -> {grades_str} (avg: {average:.2f})")
