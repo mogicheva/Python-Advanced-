@@ -1,0 +1,18 @@
+guests = int(input())
+total = [input() for _ in range(guests)]
+while True:
+    command = input()
+    if command == "END":
+        break
+    total.remove(command)
+
+
+def is_vip(guest):
+    return guest[0].isdigit()
+
+vip_guest = sorted([g for g in total if is_vip(g)])
+regular_guest = sorted([g for g in total if not is_vip(g)])
+
+print(len(total))
+[print(g) for g in vip_guest]
+[print(g) for g in regular_guest]
