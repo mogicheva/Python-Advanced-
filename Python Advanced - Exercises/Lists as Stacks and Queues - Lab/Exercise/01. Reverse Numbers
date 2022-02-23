@@ -1,0 +1,7 @@
+nums = input().split()
+ss = []
+
+while len(nums) > 0:
+    el = nums.pop()
+    ss.append(el)
+print(' '.join(ss))
