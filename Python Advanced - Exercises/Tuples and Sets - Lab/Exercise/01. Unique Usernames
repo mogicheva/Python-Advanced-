@@ -1,0 +1,9 @@
+n = int(input())
+unique = set()
+for _ in range(n):
+    name = input()
+    unique.add(name)
+
+
+for person in unique:
+    print(person)
