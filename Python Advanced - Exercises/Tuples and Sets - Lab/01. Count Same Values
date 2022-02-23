@@ -1,0 +1,10 @@
+dd = {}
+
+nums = [float(el) for el in input().split()]
+for number in nums:
+    if number not in dd:
+        dd[number] = 0
+    dd[number] += 1
+
+for number, count in dd.items():
+    print(f"{number} - {count} times")
